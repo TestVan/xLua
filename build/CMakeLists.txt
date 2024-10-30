@@ -33,6 +33,28 @@ find_path(XLUA_PROJECT_DIR NAMES SConstruct
 
 MARK_AS_ADVANCED(XLUA_PROJECT_DIR)
 
+# 本地代码的存放路径
+set (SRC_CODE_ROOT ${CMAKE_SOURCE_DIR}/../NativeSrc)
+list(APPEND THIRDPART_INC
+    ${SRC_CODE_ROOT}
+    ${SRC_CODE_ROOT}/base
+    ${SRC_CODE_ROOT}/scripting
+    ${CMAKE_SOURCE_DIR}/external
+    ${CMAKE_SOURCE_DIR}/external/thirdparty
+)
+
+# tolua++代码根文件夹路径
+set(TOLUAPP_51_ROOT "external/tolua/toluapp_51")
+set(TOLUAPP_53_ROOT "external/tolua/toluapp_52_53")
+if (USING_LUAJIT)
+    set(TOLUAPP_ROOT ${TOLUAPP_51_ROOT})    # luajit只支持5.1，所以tolua也用支持5.1的版本
+    ADD_DEFINITIONS(-DLUA_COMPAT_5_1)
+else ()
+    set(TOLUAPP_ROOT ${TOLUAPP_53_ROOT})
+endif ()
+list(APPEND THIRDPART_INC  ${TOLUAPP_ROOT})
+# end tolua++
+
 if (NOT LUA_VERSION)
     set(LUA_VERSION "5.3.5")
 endif()
@@ -111,6 +133,27 @@ if ( WIN32 AND NOT CYGWIN )
 else ( )
     list (APPEND LUA_SOCKET luasocket/usocket.c)
 endif ( )
+
+set(LUA_EXTENSIONS_SRC)
+
+# begin tolua
+list(APPEND LUA_EXTENSIONS_SRC 
+    ${TOLUAPP_ROOT}/tolua_event.c
+    ${TOLUAPP_ROOT}/tolua_is.c
+    ${TOLUAPP_ROOT}/tolua_map.c
+    ${TOLUAPP_ROOT}/tolua_push.c
+    ${TOLUAPP_ROOT}/tolua_to.c
+)
+# end tolua
+
+
+set_property(
+    SOURCE ${LUA_EXTENSIONS_SRC}
+    APPEND
+    PROPERTY COMPILE_DEFINITIONS
+    LUA_LIB
+)
+set (THIRDPART_SRC ${THIRDPART_SRC} ${LUA_EXTENSIONS_SRC} )
 
 set ( XLUA_CORE
     i64lib.c
