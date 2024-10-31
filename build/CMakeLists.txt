@@ -172,7 +172,7 @@ set(LUA_EXTENSIONS_SRC)
 # 自定义模块option
 
 if (USING_LUAJIT)
-    add_definitions(-DUSING_LUAJIT)
+    add_definitions(-DUSING_LUAJITCJ)
     add_definitions(-DLUAJIT_2_1_0_b3)
 endif()
 
