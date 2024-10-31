@@ -14,7 +14,6 @@ if ( WIN32 AND NOT CYGWIN AND NOT ( CMAKE_SYSTEM_NAME STREQUAL "WindowsStore" ) 
 endif ()
 
 project(XLua)
-
 if ( IOS )
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fembed-bitcode")
         set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fembed-bitcode")
@@ -25,6 +24,17 @@ option ( USING_LUAJIT "using luajit" OFF )
 option ( GC64 "using gc64" OFF )
 option ( LUAC_COMPATIBLE_FORMAT "compatible format" OFF )
 
+#自定义option begin
+#使用Cjson
+option ( USE_CJSON "using cjson" ON )
+#使用7Zip
+#option ( USE_PC7ZIP "using 7zip" ON )
+#使用RapidJson
+option ( USE_RAPIDJSON "using RapidJson" ON )
+#使用pb
+option ( USE_PROTOBUF "using pb" ON )
+#自定义option end
+
 find_path(XLUA_PROJECT_DIR NAMES SConstruct
     PATHS 
     ${CMAKE_SOURCE_DIR}
@@ -34,7 +44,12 @@ find_path(XLUA_PROJECT_DIR NAMES SConstruct
 MARK_AS_ADVANCED(XLUA_PROJECT_DIR)
 
 # 本地代码的存放路径
-set (SRC_CODE_ROOT ${CMAKE_SOURCE_DIR}/../NativeSrc)
+add_definitions(-DUNITY)
+if (USE_CJSON)
+add_definitions(-DUSE_CJSON)
+endif()
+
+set (SRC_CODE_ROOT ${CMAKE_SOURCE_DIR}/NativeSrc)
 list(APPEND THIRDPART_INC
     ${SRC_CODE_ROOT}
     ${SRC_CODE_ROOT}/base
@@ -53,6 +68,23 @@ else ()
     set(TOLUAPP_ROOT ${TOLUAPP_53_ROOT})
 endif ()
 list(APPEND THIRDPART_INC  ${TOLUAPP_ROOT})
+
+if (USE_PC7ZIP)
+    list(APPEND THIRDPART_INC  external/lua-7zip)
+    list(APPEND THIRDPART_INC  external/lua-7zip/lzma)
+    list(APPEND THIRDPART_INC  external/lua-7zip/lzma/C)
+    list(APPEND THIRDPART_INC  external/lua-7zip/src)
+endif () 
+
+if (USE_RAPIDJSON)
+    list(APPEND THIRDPART_INC  external/lua-rapidjson/include)
+    list(APPEND THIRDPART_INC  external/lua-rapidjson/include/rapidjson)
+endif ()
+
+if (USE_PROTOBUF)
+    list(APPEND THIRDPART_INC  external/lua-protobuf)
+endif () 
+
 # end tolua++
 
 if (NOT LUA_VERSION)
@@ -136,6 +168,28 @@ endif ( )
 
 set(LUA_EXTENSIONS_SRC)
 
+
+# 自定义模块option
+
+if (USING_LUAJIT)
+    add_definitions(-DUSING_LUAJIT)
+    add_definitions(-DLUAJIT_2_1_0_b3)
+endif()
+
+if (USE_PC7ZIP)
+    add_definitions(-DUSE_PC7ZIP)
+endif()
+
+if (USE_RAPIDJSON)
+    add_definitions(-DUSE_RAPIDJSON)
+endif()
+
+if (USE_PROTOBUF)
+    add_definitions(-DUSE_PROTOBUF)
+endif()
+# 自定义模块optionEnd
+
+#自定义 cpp
 # begin tolua
 list(APPEND LUA_EXTENSIONS_SRC 
     ${TOLUAPP_ROOT}/tolua_event.c
@@ -146,6 +200,49 @@ list(APPEND LUA_EXTENSIONS_SRC
 )
 # end tolua
 
+list(APPEND LUA_EXTENSIONS_SRC
+    ${SRC_CODE_ROOT}/PerformFunctions.cpp
+    ${SRC_CODE_ROOT}/UnityLuaOpen.cpp
+    # ${SRC_CODE_ROOT}/FileUtils.cpp
+)
+
+# begin cocos_code
+list(APPEND LUA_EXTENSIONS_SRC
+    ${SRC_CODE_ROOT}/scripting/lua-bindings/manual/LuaBasicConversions.cpp
+    ${SRC_CODE_ROOT}/scripting/lua-bindings/manual/pc_tolua_fix.c
+    ${SRC_CODE_ROOT}/scripting/lua-bindings/manual/tolua_fix.cpp
+    ${SRC_CODE_ROOT}/scripting/lua-bindings/manual/LuaStack.c
+)
+# end cocos_code
+
+if (USE_CJSON)
+    # begin cjson
+    list(APPEND LUA_EXTENSIONS_SRC
+        external/lua-cjson/fpconv.c
+        external/lua-cjson/lua_cjson.c
+        external/lua-cjson/strbuf.c
+    )
+    list(APPEND THIRDPART_INC  external/lua-cjson)
+    # end cjson
+endif()
+
+if (USE_RAPIDJSON)
+    #begin lua-rapidjson
+    list(APPEND LUA_EXTENSIONS_SRC
+        external/lua-rapidjson/source/rapidjson.cpp
+        external/lua-rapidjson/source/Document.cpp
+        external/lua-rapidjson/source/Schema.cpp
+        external/lua-rapidjson/source/values.cpp
+    )
+ endif()
+
+ if (USE_PROTOBUF)
+    # list(APPEND THIRDPART_INC  external/lua-protobuf/pb.c)
+    list(APPEND LUA_EXTENSIONS_SRC
+        external/lua-protobuf/pb.c
+    )
+endif () 
+#自定义 cpp end
 
 set_property(
     SOURCE ${LUA_EXTENSIONS_SRC}
