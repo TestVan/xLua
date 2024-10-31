@@ -18,6 +18,10 @@ if ( IOS )
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fembed-bitcode")
         set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fembed-bitcode")
 endif ()
+if (APPLE)
+    set(CMAKE_CXX_STANDARD 11)
+    set(CXX_STANDARD_REQUIRED)
+endif()
 
 option ( UINT_ESPECIALLY "using custom ulong" OFF )
 option ( USING_LUAJIT "using luajit" OFF )
@@ -230,9 +234,6 @@ if (USE_RAPIDJSON)
     #begin lua-rapidjson
     list(APPEND LUA_EXTENSIONS_SRC
         external/lua-rapidjson/source/rapidjson.cpp
-        external/lua-rapidjson/source/Document.cpp
-        external/lua-rapidjson/source/Schema.cpp
-        external/lua-rapidjson/source/values.cpp
     )
  endif()
 
