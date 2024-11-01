@@ -234,6 +234,9 @@ if (USE_RAPIDJSON)
     #begin lua-rapidjson
     list(APPEND LUA_EXTENSIONS_SRC
         external/lua-rapidjson/source/rapidjson.cpp
+        external/lua-rapidjson/source/Document.cpp
+        external/lua-rapidjson/source/Schema.cpp
+        external/lua-rapidjson/source/values.cpp
     )
  endif()
 
