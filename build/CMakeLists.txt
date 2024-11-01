@@ -32,7 +32,7 @@ option ( LUAC_COMPATIBLE_FORMAT "compatible format" OFF )
 #使用Cjson
 option ( USE_CJSON "using cjson" ON )
 #使用7Zip
-#option ( USE_PC7ZIP "using 7zip" ON )
+option ( USE_PC7ZIP "using 7zip" ON )
 #使用RapidJson
 option ( USE_RAPIDJSON "using RapidJson" ON )
 #使用pb
@@ -228,6 +228,45 @@ if (USE_CJSON)
     )
     list(APPEND THIRDPART_INC  external/lua-cjson)
     # end cjson
+endif()
+
+if (USE_PC7ZIP)
+    # begin 7zip
+    list(APPEND LUA_EXTENSIONS_SRC
+        external/lua-7zip/src/PCZipExtract.cpp
+        external/lua-7zip/src/lua_app_7zip.cpp
+        external/lua-7zip/lzma/C7z.cpp
+        external/lua-7zip/lzma/7zMain.c
+        external/lua-7zip/lzma/C/Lzma2Dec.c
+        external/lua-7zip/lzma/C/Ppmd7Dec.c
+        external/lua-7zip/lzma/C/XzDec.c
+        external/lua-7zip/lzma/C/Bcj2.c
+        external/lua-7zip/lzma/C/LzFind.c
+        external/lua-7zip/lzma/C/Ppmd7.c
+        external/lua-7zip/lzma/C/Bra.c
+        external/lua-7zip/lzma/C/7zIn.c
+        external/lua-7zip/lzma/C/Bra86.c
+        external/lua-7zip/lzma/C/7zAlloc.c
+        external/lua-7zip/lzma/C/XzIn.c
+        external/lua-7zip/lzma/C/Alloc.c
+        external/lua-7zip/lzma/C/LzmaDec.c
+        external/lua-7zip/lzma/C/Ppmd7Enc.c
+        external/lua-7zip/lzma/C/7zDec.c
+        external/lua-7zip/lzma/C/7zBuf2.c
+        external/lua-7zip/lzma/C/XzCrc64.c
+        external/lua-7zip/lzma/C/BraIA64.c
+        external/lua-7zip/lzma/C/Lzma86Dec.c
+        external/lua-7zip/lzma/C/7zStream.c
+        external/lua-7zip/lzma/C/Sha256.c
+        external/lua-7zip/lzma/C/Delta.c
+        external/lua-7zip/lzma/C/7zFile.c
+        external/lua-7zip/lzma/C/7zCrc.c
+        external/lua-7zip/lzma/C/CpuArch.c
+        external/lua-7zip/lzma/C/Xz.c
+        external/lua-7zip/lzma/C/7zCrcOpt.c
+        external/lua-7zip/lzma/C/7zBuf.c
+    )
+    # end 7zip
 endif()
 
 if (USE_RAPIDJSON)
