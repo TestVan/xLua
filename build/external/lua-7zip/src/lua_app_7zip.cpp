@@ -79,7 +79,15 @@ LUA_API int register_app_7zip (lua_State *l)
         { "extractFile", lua_zipextract_extractfile },
         { NULL, NULL }
     };
+
+#if LUA_VERSION_NUM > 501 && !defined(LUA_COMPAT_MODULE)
+    lua_newtable(l);
+    luaL_setfuncs(l, reg, 0);
+    lua_setglobal(l, "c7zip");
+#else
     luaL_openlib(l, "c7zip", reg, 0);
+#endif
+
     s_mainThread = l;
     return 1;
 }

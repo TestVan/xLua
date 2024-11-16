@@ -286,7 +286,13 @@ static const struct luaL_Reg mylib [] = {
     };
 
 LUA_API int luaopen_Toluafix (lua_State *L) {
-      luaL_openlib(L, "Toluafix", mylib, 0);
+#if LUA_VERSION_NUM > 501 && !defined(LUA_COMPAT_MODULE)
+    lua_newtable(L);
+    luaL_setfuncs(L, mylib, 0);
+    lua_setglobal(L, "Toluafix"); 
+#else
+    luaL_openlib(L, "Toluafix", mylib, 0);
+#endif
       return 1;
     }
 
