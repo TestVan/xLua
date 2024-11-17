@@ -162,16 +162,19 @@ jobs:
         with:
           path: ./build/plugin_lua54/**/*
           name: plugin_lua54
+          overwrite: true
       - name: Upload53
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_lua53/**/*
           name: plugin_lua53   
+          overwrite: true
       - name: UploadJit
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_luajit/**/*
-          name: plugin_luajit  
+          name: plugin_luajit 
+          overwrite: true
   windows:
     runs-on: windows-2019
 
@@ -199,17 +202,19 @@ jobs:
         with:
           path: ./build/plugin_lua54/**/*
           name: plugin_lua54
+          overwrite: true
       - name: Upload53
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_lua53/**/*
-          name: plugin_lua53   
+          name: plugin_lua53  
+          overwrite: true
       - name: UploadJit
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_luajit/**/*
           name: plugin_luajit
-          
+          overwrite: true
   windows-luajit-32:
     runs-on: windows-2019
 
@@ -231,6 +236,8 @@ jobs:
         with:
           path: ./build/plugin_luajit/**/*
           name: plugin_luajit
+          overwrite: true
+
 
   publish:
     runs-on: ubuntu-latest
@@ -245,12 +252,14 @@ jobs:
         with:
           name: plugin_lua53
           path: plugin_lua53/
+          overwrite: true
           
       - uses: actions/download-artifact@v4.1.7
         with:
           name: plugin_lua54
           path: plugin_lua54/
-          
+          overwrite: true
+
       - name: Create Release Asset
         run: |
           cd plugin_luajit/ && tar cvfz ../luajit_${{ github.event.inputs.tag_name }}.tgz Plugins && cd -
