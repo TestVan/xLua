@@ -23,6 +23,10 @@ if (APPLE)
     set(CXX_STANDARD_REQUIRED)
 endif()
 
+# add C++ support
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+# end add 
+
 option ( UINT_ESPECIALLY "using custom ulong" OFF )
 option ( USING_LUAJIT "using luajit" OFF )
 option ( GC64 "using gc64" OFF )
