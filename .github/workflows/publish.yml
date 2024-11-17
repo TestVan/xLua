@@ -29,12 +29,13 @@ jobs:
         with:
           path: ./build/plugin_lua54/**/*
           name: plugin_lua54
+          overwrite: true
       - name: Upload53
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_lua53/**/*
-          name: plugin_lua53 
-          
+          name: plugin_lua53
+          overwrite: true
   ohos:
     runs-on: ubuntu-latest
     steps:
@@ -58,12 +59,14 @@ jobs:
         with:
           path: ./build/plugin_lua54/**/*
           name: plugin_lua54
+          overwrite: true
       - name: Upload53
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_lua53/**/*
           name: plugin_lua53
-
+          overwrite: true
+          
   android_luajit:
     runs-on: ubuntu-latest
     steps:
@@ -85,6 +88,7 @@ jobs:
         with:
           path: ./build/plugin_luajit/**/*
           name: plugin_luajit
+          overwrite: true
           
   linux:
     runs-on: ubuntu-latest
@@ -127,16 +131,19 @@ jobs:
         with:
           path: ./build/plugin_lua54/**/*
           name: plugin_lua54
+          overwrite: true
       - name: Upload53
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_lua53/**/*
           name: plugin_lua53   
+          overwrite: true
       - name: UploadJit
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_luajit/**/*
           name: plugin_luajit
+          overwrite: true
   osx:
     runs-on: macos-11
 
