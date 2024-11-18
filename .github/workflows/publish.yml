@@ -87,7 +87,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_luajit/**/*
-          name: plugin_luajit
+          name: plugin_luajit_android
           overwrite: true
           
   linux:
@@ -134,19 +134,19 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_lua54/**/*
-          name: plugin_lua54
+          name: plugin_lua54_ios
           overwrite: true
       - name: Upload53
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_lua53/**/*
-          name: plugin_lua53   
+          name: plugin_lua53_ios   
           overwrite: true
       - name: UploadJit
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_luajit/**/*
-          name: plugin_luajit
+          name: plugin_luajit_ios
           overwrite: true
   osx:
     runs-on: macos-12
@@ -165,19 +165,19 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_lua54/**/*
-          name: plugin_lua54
+          name: plugin_lua54_osx
           overwrite: true
       - name: Upload53
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_lua53/**/*
-          name: plugin_lua53   
+          name: plugin_lua53_osx   
           overwrite: true
       - name: UploadJit
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_luajit/**/*
-          name: plugin_luajit 
+          name: plugin_luajit_osx
           overwrite: true
   windows:
     runs-on: windows-2019
@@ -205,19 +205,19 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_lua54/**/*
-          name: plugin_lua54
+          name: plugin_lua54_windows
           overwrite: true
       - name: Upload53
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_lua53/**/*
-          name: plugin_lua53  
+          name: plugin_lua53_windows  
           overwrite: true
       - name: UploadJit
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_luajit/**/*
-          name: plugin_luajit
+          name: plugin_luajit_windows
           overwrite: true
   windows-luajit-32:
     runs-on: windows-2019
@@ -239,7 +239,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_luajit/**/*
-          name: plugin_luajit
+          name: plugin_luajit_windows32
           overwrite: true
 
 
