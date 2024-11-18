@@ -196,7 +196,7 @@ jobs:
       - name: Build Luajit
         run: |
           cd build
-          .\make_win64_luajit.bat
+          .\make_win64_luajit_gc64.bat
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
