@@ -104,17 +104,17 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_lua54/**/*
-          name: plugin_lua54
+          name: plugin_lua54_linux
       - name: Upload53
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_lua53/**/*
-          name: plugin_lua53   
+          name: plugin_lua53_linux   
       - name: UploadJit
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_luajit/**/*
-          name: plugin_luajit  
+          name: plugin_luajit_linux
   ios:
     runs-on: macos-latest
 
