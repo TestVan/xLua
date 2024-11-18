@@ -105,16 +105,20 @@ jobs:
         with:
           path: ./build/plugin_lua54/**/*
           name: plugin_lua54_linux
+          overwrite: true
+
       - name: Upload53
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_lua53/**/*
-          name: plugin_lua53_linux   
+          name: plugin_lua53_linux
+          overwrite: true
       - name: UploadJit
         uses: actions/upload-artifact@v4
         with:
           path: ./build/plugin_luajit/**/*
           name: plugin_luajit_linux
+          overwrite: true
   ios:
     runs-on: macos-latest
 
