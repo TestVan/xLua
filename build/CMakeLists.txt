@@ -33,6 +33,13 @@ option ( GC64 "using gc64" OFF )
 option ( LUAC_COMPATIBLE_FORMAT "compatible format" OFF )
 
 #自定义option begin
+option ( XLUA_BUILD_WITH_CARES "build with c-ares support" ON )
+option ( YASIO_USE_SHARED_PACKET "" ON)
+
+message(STATUS "WINSTORE=${WINSTORE}")
+message(STATUS "LINUX=${LINUX}")
+message(STATUS "MSVC=${MSVC}")
+
 #使用Cjson
 option ( USE_CJSON "using cjson" ON )
 #使用7Zip
@@ -41,6 +48,13 @@ option ( USE_PC7ZIP "using 7zip" ON )
 option ( USE_RAPIDJSON "using RapidJson" ON )
 #使用pb
 option ( USE_PROTOBUF "using pb" ON )
+
+# Disable c-ares for winstore, because c-ares not support it properly
+if(WINSTORE)
+    set (XLUA_BUILD_WITH_CARES OFF)
+endif()
+message(STATUS "XLUA_BUILD_WITH_CARES=${XLUA_BUILD_WITH_CARES}")
+
 #自定义option end
 
 find_path(XLUA_PROJECT_DIR NAMES SConstruct
@@ -93,6 +107,55 @@ if (USE_PROTOBUF)
     list(APPEND THIRDPART_INC  external/lua-protobuf)
 endif () 
 
+#begin yasio
+if (ANDROID)
+    if (NOT THIRDPART_LIB)
+        set(THIRDPART_LIB "-llog")
+    else()
+        set(THIRDPART_LIB "${THIRDPART_LIB} -llog")
+    endif()
+endif()
+
+set (YASIO_SRC
+    yasio/xxsocket.cpp
+    yasio/yasio.cpp
+    yasio/bindings/lyasio.cpp
+    yasio/bindings/yasio_ni.cpp
+)
+
+if (XLUA_BUILD_WITH_CARES AND ANDROID)
+   set (YASIO_SRC ${YASIO_SRC}
+    yasio/platform/yasio_jni.cpp
+   )
+endif()
+
+set_property(
+    SOURCE ${YASIO_SRC}
+    APPEND
+    PROPERTY COMPILE_DEFINITIONS
+)
+list(APPEND THIRDPART_INC yasio)
+set (YASIOPART_SRC ${YASIOPART_SRC} ${YASIO_SRC})
+
+if (XLUA_BUILD_WITH_CARES)
+    #begin c-ares
+    set(CARES_STATIC ON CACHE BOOL "Build c-ares as static library" FORCE)
+    set(CARES_SHARED OFF CACHE BOOL "Build c-ares as shared library" FORCE)
+    set(CARES_BUILD_TOOLS OFF CACHE BOOL "Build c-ares tools" FORCE)
+    set(CARES_INSTALL OFF CACHE BOOL "Create installation targets (chain builders may want to disable this)" FORCE)
+    if(CMAKE_OSX_ARCHITECTURES)
+        set(CMAKE_OSX_ARCHITECTURES "${CMAKE_OSX_ARCHITECTURES}" CACHE STRING "Passing osx arch to c-ares" FORCE)
+    endif()
+    add_subdirectory(c-ares)
+    include_directories($<TARGET_FILE_DIR:c-ares>)
+    if( LINUX AND (NOT ANDROID) )
+        message(STATUS "Add -fPIC for c-ares for resolve link error")
+        target_compile_options(c-ares PRIVATE "-fPIC")
+    endif()
+    #end c-ares
+endif ()
+
+#end yasio
 # end tolua++
 
 if (NOT LUA_VERSION)
@@ -353,6 +416,8 @@ if (APPLE)
                 ${LUA_SOCKET}
                 ${XLUA_CORE}
                 ${THIRDPART_SRC}
+                ${YASIOPART_SRC}
+
             )
         else ()
             set(CMAKE_OSX_ARCHITECTURES "$(ARCHS_STANDARD_64_BIT)")
@@ -362,6 +427,8 @@ if (APPLE)
                 ${LUA_SOCKET}
                 ${XLUA_CORE}
                 ${THIRDPART_SRC}
+                ${YASIOPART_SRC}
+
             )
             set_target_properties ( xlua PROPERTIES BUNDLE TRUE )
             #set_target_properties ( xlua PROPERTIES FRAMEWORK TRUE )
@@ -374,6 +441,7 @@ elseif ("${CMAKE_SYSTEM_NAME}" STREQUAL "Switch")
         ${LUA_LIB}
         ${XLUA_CORE}
         ${THIRDPART_SRC}
+        ${YASIOPART_SRC}
     )
     target_compile_options(xlua PRIVATE -m64 -mcpu=cortex-a57+fp+simd+crypto+crc -fno-common -fno-short-enums -ffunction-sections -fdata-sections -fPIC -fms-extensions)
 else ( )
@@ -383,6 +451,7 @@ else ( )
         ${LUA_SOCKET}
         ${XLUA_CORE}
         ${THIRDPART_SRC}
+        ${YASIOPART_SRC}
     )
 endif ( )
 
@@ -436,3 +505,63 @@ else ( )
         )
     endif()
 endif ( )
+
+if ( BUILD_SHARED_LIBS )
+    target_compile_definitions (xlua PUBLIC YASIO_BUILD_SHARED_LIBS=1)
+endif ()
+
+# begin additional compiler flags
+if (XLUA_BUILD_WITH_CARES)
+    target_link_libraries(xlua c-ares)
+    target_compile_definitions (xlua PUBLIC YASIO_HAVE_CARES=1)
+endif ()
+target_compile_definitions (xlua PUBLIC YASIO_ENABLE_ARES_PROFILER=1)
+# end additional compiler flags
+
+# fix default lua_newuserdata can't return aligned pointer properly
+# MSVC max_align_t=double, lua already handle properly
+if (NOT MSVC)
+    message(STATUS "Define LUAI_USER_ALIGNMENT_T for non-msvc compiler to solve address align issue!")
+    # see also: https://github.com/llvm/llvm-project/blob/master/clang/lib/Headers/__stddef_max_align_t.h
+    if(APPLE)
+        target_compile_definitions (xlua PUBLIC "LUAI_USER_ALIGNMENT_T=long double")
+    else()
+        target_compile_definitions (xlua PUBLIC LUAI_USER_ALIGNMENT_T=max_align_t)
+    endif()
+endif()
+
+# strip
+message("CMAKE_STRIP=${CMAKE_STRIP}")
+if (LINUX OR ANDROID)
+    add_custom_command(TARGET xlua POST_BUILD
+        COMMAND ${CMAKE_STRIP} ${PROJECT_BINARY_DIR}/libxlua.so -o ${PROJECT_BINARY_DIR}/libxlua.so
+    )
+endif()
+
+# config yasio options for xlua
+macro(yasio_config_pred pred)
+    if(${pred})
+        target_compile_definitions(xlua PUBLIC ${pred}=1)
+    endif()
+endmacro()
+macro(yasio_config_option optname optval)
+    if(${optname})
+        target_compile_definitions(xlua PUBLIC ${optname}=${optval})
+    endif()
+endmacro()
+yasio_config_pred(YASIO_VERBOSE_LOG)
+yasio_config_pred(YASIO_USE_SPSC_QUEUE)
+yasio_config_pred(YASIO_USE_SHARED_PACKET)
+yasio_config_pred(YASIO_DISABLE_OBJECT_POOL)
+yasio_config_pred(YASIO_ENABLE_ARES_PROFILER)
+yasio_config_pred(YASIO_HAVE_CARES)
+yasio_config_pred(YASIO_HAVE_KCP)
+yasio_config_option(YASIO_SSL_BACKEND "${YASIO_SSL_BACKEND}")
+# yasio_config_pred(YASIO_DISABLE_CONCURRENT_SINGLETON)
+yasio_config_pred(YASIO_ENABLE_UDS)
+yasio_config_pred(YASIO_NT_COMPAT_GAI)
+yasio_config_pred(YASIO_MINIFY_EVENT)
+yasio_config_pred(YASIO_HAVE_HALF_FLOAT)
+
+yasio_config_pred(YASIO_NO_JNI_ONLOAD)
+
