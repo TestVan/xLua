@@ -251,7 +251,8 @@ jobs:
         with:
           name: plugin_luajit
           path: plugin_luajit/
-          
+          overwrite: true
+
       - uses: actions/download-artifact@v4.1.7
         with:
           name: plugin_lua53
