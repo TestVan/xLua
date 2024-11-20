@@ -108,6 +108,15 @@ if (USE_PROTOBUF)
 endif () 
 
 #begin yasio
+#c++ standard
+if (NOT DEFINED CXX_STD)
+    set (CXX_STD 14)
+endif()
+message(STATUS "CXX_STD=${CXX_STD}")
+set(CMAKE_CXX_STANDARD ${CXX_STD})
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 if (ANDROID)
     if (NOT THIRDPART_LIB)
         set(THIRDPART_LIB "-llog")
