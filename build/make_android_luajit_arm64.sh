@@ -44,7 +44,7 @@ make HOST_CC="gcc -m32" CROSS=$NDKP TARGET_SYS=Linux TARGET_FLAGS="$NDKF $NDKARC
 
 cd "$DIR"
 mkdir -p build_lj_v7a && cd build_lj_v7a
-cmake -DUSING_LUAJIT=ON -DANDROID_ABI=armeabi-v7a -DCMAKE_TOOLCHAIN_FILE=../cmake/android.toolchain.cmake -DANDROID_TOOLCHAIN_NAME=arm-linux-androideabi-4.9 -DANDROID_NATIVE_API_LEVEL=android-21 ../
+cmake -DUSING_LUAJIT=ON -DANDROID_ABI=armeabi-v7a -DCMAKE_TOOLCHAIN_FILE=../cmake/android.toolchain.cmake -DANDROID_NATIVE_API_LEVEL=android-21 -DANDROID_TOOLCHAIN=clang -DANDROID_TOOLCHAIN_NAME=arm-linux-androideabi-4.9  ../
 cd "$DIR"
 cmake --build build_lj_v7a --config Release
 mkdir -p plugin_luajit/Plugins/Android/libs/armeabi-v7a/
