@@ -10,7 +10,7 @@ mkdir build_lj64 & pushd build_lj64
 cmake -DUSING_LUAJIT=ON -DGC64=ON -G "Visual Studio 16 2019" -A x64 ..
 IF %ERRORLEVEL% NEQ 0 cmake -DUSING_LUAJIT=ON -DGC64=ON -G -G "Visual Studio 16 2019" -A x64 ..
 popd
-cmake --build build_lj64 --config Release
+cmake --build build_lj64 --config Debug
 md plugin_luajit\Plugins\x86_64
 copy /Y build_lj64\Release\xlua.dll plugin_luajit\Plugins\x86_64\xlua.dll
 pause
