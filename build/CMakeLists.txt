@@ -124,12 +124,7 @@ endif ()
 
 # begin yasio
 # yasio strong recommend use c++17 with sol bindings
-if (USING_LUAJIT)
-    set(CMAKE_CXX_STANDARD 17)
-else() 
-    set(CMAKE_CXX_STANDARD 14)
-endif ()
-
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 set (YASIO_SOURCES
   yasio/yasio/xxsocket.cpp
