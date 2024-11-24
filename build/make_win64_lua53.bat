@@ -20,7 +20,7 @@ if "%__VSVER%" neq "" (
 mkdir build64 & pushd build64
 cmake -G "%__VS%" -A x64 ..
 popd
-cmake --build build64 --config Release
+cmake --build build64 --config Debug
 md plugin_lua53\Plugins\x86_64
 copy /Y build64\Release\xlua.dll plugin_lua53\Plugins\x86_64\xlua.dll
 pause

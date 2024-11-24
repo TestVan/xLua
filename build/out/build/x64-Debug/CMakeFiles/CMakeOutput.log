@@ -1,0 +1,217 @@
+The system is: Windows - 10.0.26100 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30156 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCCompilerId.c
+Microsoft (R) Incremental Linker Version 14.29.30156.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCCompilerId.exe 
+CMakeCCompilerId.obj 
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdC/CMakeCCompilerId.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30156 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCXXCompilerId.cpp
+Microsoft (R) Incremental Linker Version 14.29.30156.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCXXCompilerId.exe 
+CMakeCXXCompilerId.obj 
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+
+The CXX compiler identification is MSVC, found in "D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.exe"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_e20ab && [1/2] Building C object CMakeFiles\cmTC_e20ab.dir\CMakeCCompilerABI.c.obj
+[2/2] Linking C executable cmTC_e20ab.exe
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9aa9d && [1/2] Building CXX object CMakeFiles\cmTC_9aa9d.dir\CMakeCXXCompilerABI.cpp.obj
+[2/2] Linking CXX executable cmTC_9aa9d.exe
+
+
+
+Determining if files sys/types.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9fcb0 && [1/2] Building C object CMakeFiles\cmTC_9fcb0.dir\HAVE_SYS_TYPES_H.c.obj
+[2/2] Linking C executable cmTC_9fcb0.exe
+
+
+
+Determining if files assert.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_8c953 && [1/2] Building C object CMakeFiles\cmTC_8c953.dir\HAVE_ASSERT_H.c.obj
+[2/2] Linking C executable cmTC_8c953.exe
+
+
+
+Determining if files errno.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_0d774 && [1/2] Building C object CMakeFiles\cmTC_0d774.dir\HAVE_ERRNO_H.c.obj
+[2/2] Linking C executable cmTC_0d774.exe
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_fbdc4 && [1/2] Building C object CMakeFiles\cmTC_fbdc4.dir\HAVE_FCNTL_H.c.obj
+[2/2] Linking C executable cmTC_fbdc4.exe
+
+
+
+Determining if files inttypes.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_2b61a && [1/2] Building C object CMakeFiles\cmTC_2b61a.dir\HAVE_INTTYPES_H.c.obj
+[2/2] Linking C executable cmTC_2b61a.exe
+
+
+
+Determining if files limits.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_eab83 && [1/2] Building C object CMakeFiles\cmTC_eab83.dir\HAVE_LIMITS_H.c.obj
+[2/2] Linking C executable cmTC_eab83.exe
+
+
+
+Determining if files malloc.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_3c2db && [1/2] Building C object CMakeFiles\cmTC_3c2db.dir\HAVE_MALLOC_H.c.obj
+[2/2] Linking C executable cmTC_3c2db.exe
+
+
+
+Determining if files memory.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a3768 && [1/2] Building C object CMakeFiles\cmTC_a3768.dir\HAVE_MEMORY_H.c.obj
+[2/2] Linking C executable cmTC_a3768.exe
+
+
+
+Determining if files signal.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_242cf && [1/2] Building C object CMakeFiles\cmTC_242cf.dir\HAVE_SIGNAL_H.c.obj
+[2/2] Linking C executable cmTC_242cf.exe
+
+
+
+Determining if files stdbool.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_d7e39 && [1/2] Building C object CMakeFiles\cmTC_d7e39.dir\HAVE_STDBOOL_H.c.obj
+[2/2] Linking C executable cmTC_d7e39.exe
+
+
+
+Determining if files stdint.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a104f && [1/2] Building C object CMakeFiles\cmTC_a104f.dir\HAVE_STDINT_H.c.obj
+[2/2] Linking C executable cmTC_a104f.exe
+
+
+
+Determining if files stdlib.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b3979 && [1/2] Building C object CMakeFiles\cmTC_b3979.dir\HAVE_STDLIB_H.c.obj
+[2/2] Linking C executable cmTC_b3979.exe
+
+
+
+Determining if files string.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_89fd7 && [1/2] Building C object CMakeFiles\cmTC_89fd7.dir\HAVE_STRING_H.c.obj
+[2/2] Linking C executable cmTC_89fd7.exe
+
+
+
+Determining if files sys/stat.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_7bbc1 && [1/2] Building C object CMakeFiles\cmTC_7bbc1.dir\HAVE_SYS_STAT_H.c.obj
+[2/2] Linking C executable cmTC_7bbc1.exe
+
+
+
+Determining if files time.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b1782 && [1/2] Building C object CMakeFiles\cmTC_b1782.dir\HAVE_TIME_H.c.obj
+[2/2] Linking C executable cmTC_b1782.exe
+
+
+
+Determining if files winsock2.h;windows.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_7b92c && [1/2] Building C object CMakeFiles\cmTC_7b92c.dir\HAVE_WINSOCK2_H.c.obj
+[2/2] Linking C executable cmTC_7b92c.exe
+
+
+
+Determining if files winsock2.h;ws2tcpip.h;windows.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_d5959 && [1/2] Building C object CMakeFiles\cmTC_d5959.dir\HAVE_WS2TCPIP_H.c.obj
+[2/2] Linking C executable cmTC_d5959.exe
+
+
+
+Determining if files winsock.h;windows.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_f8c1b && [1/2] Building C object CMakeFiles\cmTC_f8c1b.dir\HAVE_WINSOCK_H.c.obj
+[2/2] Linking C executable cmTC_f8c1b.exe
+
+
+
+Determining if files windows.h exist passed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b903d && [1/2] Building C object CMakeFiles\cmTC_b903d.dir\HAVE_WINDOWS_H.c.obj
+[2/2] Linking C executable cmTC_b903d.exe
+
+
+

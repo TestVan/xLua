@@ -22,8 +22,6 @@
 #include "lstate.h"
 #endif
 
-LUA_API void luaregister_yasio(lua_State* L);
-
 /*
 ** stdcall C function support
 */
@@ -1244,7 +1242,8 @@ LUA_API void luaopen_xlua(lua_State *L) {
 	luaL_register(L, "xlua", xlualib);
     lua_pop(L, 1);
 #endif
-    
-    luaregister_yasio(L);
+
+    extern int luaregister_yasio(lua_State *L);
+	luaregister_yasio(L);
 }
 

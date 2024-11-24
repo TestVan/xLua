@@ -1,0 +1,427 @@
+Determining if the function res_servicename exists failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_85986 && [1/2] Building C object CMakeFiles\cmTC_85986.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_85986.exe
+FAILED: cmTC_85986.exe 
+cmd.exe /C "cd . && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_85986.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_85986.dir\CheckFunctionExists.c.obj  /out:cmTC_85986.exe /implib:cmTC_85986.lib /pdb:cmTC_85986.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_85986.dir\CheckFunctionExists.c.obj /out:cmTC_85986.exe /implib:cmTC_85986.lib /pdb:cmTC_85986.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_85986.dir/intermediate.manifest CMakeFiles\cmTC_85986.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: 无法解析的外部符号 res_servicename，函数 main 中引用了该符号
+cmTC_85986.exe : fatal error LNK1120: 1 个无法解析的外部命令
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function res_servicename exists in the resolv failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_3d199 && [1/2] Building C object CMakeFiles\cmTC_3d199.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_3d199.exe
+FAILED: cmTC_3d199.exe 
+cmd.exe /C "cd . && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_3d199.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_3d199.dir\CheckFunctionExists.c.obj  /out:cmTC_3d199.exe /implib:cmTC_3d199.lib /pdb:cmTC_3d199.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  resolv.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_3d199.dir\CheckFunctionExists.c.obj /out:cmTC_3d199.exe /implib:cmTC_3d199.lib /pdb:cmTC_3d199.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console resolv.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_3d199.dir/intermediate.manifest CMakeFiles\cmTC_3d199.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: 无法打开文件“resolv.lib”
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function gethostbyname exists failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_48568 && [1/2] Building C object CMakeFiles\cmTC_48568.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_48568.exe
+FAILED: cmTC_48568.exe 
+cmd.exe /C "cd . && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_48568.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_48568.dir\CheckFunctionExists.c.obj  /out:cmTC_48568.exe /implib:cmTC_48568.lib /pdb:cmTC_48568.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_48568.dir\CheckFunctionExists.c.obj /out:cmTC_48568.exe /implib:cmTC_48568.lib /pdb:cmTC_48568.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_48568.dir/intermediate.manifest CMakeFiles\cmTC_48568.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: 无法解析的外部符号 gethostbyname，函数 main 中引用了该符号
+cmTC_48568.exe : fatal error LNK1120: 1 个无法解析的外部命令
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function gethostbyname exists in the nsl failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_0497a && [1/2] Building C object CMakeFiles\cmTC_0497a.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_0497a.exe
+FAILED: cmTC_0497a.exe 
+cmd.exe /C "cd . && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_0497a.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_0497a.dir\CheckFunctionExists.c.obj  /out:cmTC_0497a.exe /implib:cmTC_0497a.lib /pdb:cmTC_0497a.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  nsl.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_0497a.dir\CheckFunctionExists.c.obj /out:cmTC_0497a.exe /implib:cmTC_0497a.lib /pdb:cmTC_0497a.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console nsl.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_0497a.dir/intermediate.manifest CMakeFiles\cmTC_0497a.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: 无法打开文件“nsl.lib”
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function gethostbyname exists in the socket failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_52bf7 && [1/2] Building C object CMakeFiles\cmTC_52bf7.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_52bf7.exe
+FAILED: cmTC_52bf7.exe 
+cmd.exe /C "cd . && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_52bf7.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_52bf7.dir\CheckFunctionExists.c.obj  /out:cmTC_52bf7.exe /implib:cmTC_52bf7.lib /pdb:cmTC_52bf7.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  socket.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_52bf7.dir\CheckFunctionExists.c.obj /out:cmTC_52bf7.exe /implib:cmTC_52bf7.lib /pdb:cmTC_52bf7.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console socket.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_52bf7.dir/intermediate.manifest CMakeFiles\cmTC_52bf7.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: 无法打开文件“socket.lib”
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function socket exists failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_eeecc && [1/2] Building C object CMakeFiles\cmTC_eeecc.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_eeecc.exe
+FAILED: cmTC_eeecc.exe 
+cmd.exe /C "cd . && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_eeecc.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_eeecc.dir\CheckFunctionExists.c.obj  /out:cmTC_eeecc.exe /implib:cmTC_eeecc.lib /pdb:cmTC_eeecc.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_eeecc.dir\CheckFunctionExists.c.obj /out:cmTC_eeecc.exe /implib:cmTC_eeecc.lib /pdb:cmTC_eeecc.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_eeecc.dir/intermediate.manifest CMakeFiles\cmTC_eeecc.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: 无法解析的外部符号 socket，函数 main 中引用了该符号
+cmTC_eeecc.exe : fatal error LNK1120: 1 个无法解析的外部命令
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function socket exists in the socket failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_621c5 && [1/2] Building C object CMakeFiles\cmTC_621c5.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_621c5.exe
+FAILED: cmTC_621c5.exe 
+cmd.exe /C "cd . && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_621c5.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_621c5.dir\CheckFunctionExists.c.obj  /out:cmTC_621c5.exe /implib:cmTC_621c5.lib /pdb:cmTC_621c5.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  socket.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_621c5.dir\CheckFunctionExists.c.obj /out:cmTC_621c5.exe /implib:cmTC_621c5.lib /pdb:cmTC_621c5.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console socket.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_621c5.dir/intermediate.manifest CMakeFiles\cmTC_621c5.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: 无法打开文件“socket.lib”
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function clock_gettime exists failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_07b88 && [1/2] Building C object CMakeFiles\cmTC_07b88.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_07b88.exe
+FAILED: cmTC_07b88.exe 
+cmd.exe /C "cd . && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_07b88.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_07b88.dir\CheckFunctionExists.c.obj  /out:cmTC_07b88.exe /implib:cmTC_07b88.lib /pdb:cmTC_07b88.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_07b88.dir\CheckFunctionExists.c.obj /out:cmTC_07b88.exe /implib:cmTC_07b88.lib /pdb:cmTC_07b88.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_07b88.dir/intermediate.manifest CMakeFiles\cmTC_07b88.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: 无法解析的外部符号 clock_gettime，函数 main 中引用了该符号
+cmTC_07b88.exe : fatal error LNK1120: 1 个无法解析的外部命令
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function clock_gettime exists in the rt failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_245d2 && [1/2] Building C object CMakeFiles\cmTC_245d2.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_245d2.exe
+FAILED: cmTC_245d2.exe 
+cmd.exe /C "cd . && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_245d2.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_245d2.dir\CheckFunctionExists.c.obj  /out:cmTC_245d2.exe /implib:cmTC_245d2.lib /pdb:cmTC_245d2.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  rt.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_245d2.dir\CheckFunctionExists.c.obj /out:cmTC_245d2.exe /implib:cmTC_245d2.lib /pdb:cmTC_245d2.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console rt.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_245d2.dir/intermediate.manifest CMakeFiles\cmTC_245d2.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: 无法打开文件“rt.lib”
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if files sys/socket.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_912e8 && [1/2] Building C object CMakeFiles\cmTC_912e8.dir\HAVE_SYS_SOCKET_H.c.obj
+FAILED: CMakeFiles/cmTC_912e8.dir/HAVE_SYS_SOCKET_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_912e8.dir\HAVE_SYS_SOCKET_H.c.obj /FdCMakeFiles\cmTC_912e8.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_SOCKET_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_SOCKET_H.c(2): fatal error C1083: 无法打开包括文件: “sys/socket.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <sys/socket.h>
+
+
+int main(void){return 0;}
+
+Determining if files arpa/inet.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_40bcc && [1/2] Building C object CMakeFiles\cmTC_40bcc.dir\HAVE_ARPA_INET_H.c.obj
+FAILED: CMakeFiles/cmTC_40bcc.dir/HAVE_ARPA_INET_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_40bcc.dir\HAVE_ARPA_INET_H.c.obj /FdCMakeFiles\cmTC_40bcc.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_INET_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_INET_H.c(2): fatal error C1083: 无法打开包括文件: “arpa/inet.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <arpa/inet.h>
+
+
+int main(void){return 0;}
+
+Determining if files arpa/nameser_compat.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b1a60 && [1/2] Building C object CMakeFiles\cmTC_b1a60.dir\HAVE_ARPA_NAMESER_COMPAT_H.c.obj
+FAILED: CMakeFiles/cmTC_b1a60.dir/HAVE_ARPA_NAMESER_COMPAT_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_b1a60.dir\HAVE_ARPA_NAMESER_COMPAT_H.c.obj /FdCMakeFiles\cmTC_b1a60.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_NAMESER_COMPAT_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_NAMESER_COMPAT_H.c(2): fatal error C1083: 无法打开包括文件: “arpa/nameser_compat.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <arpa/nameser_compat.h>
+
+
+int main(void){return 0;}
+
+Determining if files arpa/nameser.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_fb969 && [1/2] Building C object CMakeFiles\cmTC_fb969.dir\HAVE_ARPA_NAMESER_H.c.obj
+FAILED: CMakeFiles/cmTC_fb969.dir/HAVE_ARPA_NAMESER_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_fb969.dir\HAVE_ARPA_NAMESER_H.c.obj /FdCMakeFiles\cmTC_fb969.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_NAMESER_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_NAMESER_H.c(2): fatal error C1083: 无法打开包括文件: “arpa/nameser.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <arpa/nameser.h>
+
+
+int main(void){return 0;}
+
+Determining if files netdb.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_35967 && [1/2] Building C object CMakeFiles\cmTC_35967.dir\HAVE_NETDB_H.c.obj
+FAILED: CMakeFiles/cmTC_35967.dir/HAVE_NETDB_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_35967.dir\HAVE_NETDB_H.c.obj /FdCMakeFiles\cmTC_35967.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_NETDB_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_NETDB_H.c(2): fatal error C1083: 无法打开包括文件: “netdb.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <netdb.h>
+
+
+int main(void){return 0;}
+
+Determining if files netinet/in.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_688eb && [1/2] Building C object CMakeFiles\cmTC_688eb.dir\HAVE_NETINET_IN_H.c.obj
+FAILED: CMakeFiles/cmTC_688eb.dir/HAVE_NETINET_IN_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_688eb.dir\HAVE_NETINET_IN_H.c.obj /FdCMakeFiles\cmTC_688eb.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_NETINET_IN_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_NETINET_IN_H.c(2): fatal error C1083: 无法打开包括文件: “netinet/in.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <netinet/in.h>
+
+
+int main(void){return 0;}
+
+Determining if files netinet/tcp.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_6fac0 && [1/2] Building C object CMakeFiles\cmTC_6fac0.dir\HAVE_NETINET_TCP_H.c.obj
+FAILED: CMakeFiles/cmTC_6fac0.dir/HAVE_NETINET_TCP_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_6fac0.dir\HAVE_NETINET_TCP_H.c.obj /FdCMakeFiles\cmTC_6fac0.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_NETINET_TCP_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_NETINET_TCP_H.c(2): fatal error C1083: 无法打开包括文件: “netinet/tcp.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <netinet/tcp.h>
+
+
+int main(void){return 0;}
+
+Determining if files net/if.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_81a18 && [1/2] Building C object CMakeFiles\cmTC_81a18.dir\HAVE_NET_IF_H.c.obj
+FAILED: CMakeFiles/cmTC_81a18.dir/HAVE_NET_IF_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_81a18.dir\HAVE_NET_IF_H.c.obj /FdCMakeFiles\cmTC_81a18.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_NET_IF_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_NET_IF_H.c(2): fatal error C1083: 无法打开包括文件: “net/if.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <net/if.h>
+
+
+int main(void){return 0;}
+
+Determining if files socket.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_8901d && [1/2] Building C object CMakeFiles\cmTC_8901d.dir\HAVE_SOCKET_H.c.obj
+FAILED: CMakeFiles/cmTC_8901d.dir/HAVE_SOCKET_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_8901d.dir\HAVE_SOCKET_H.c.obj /FdCMakeFiles\cmTC_8901d.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_SOCKET_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_SOCKET_H.c(2): fatal error C1083: 无法打开包括文件: “socket.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <socket.h>
+
+
+int main(void){return 0;}
+
+Determining if files strings.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_ad47f && [1/2] Building C object CMakeFiles\cmTC_ad47f.dir\HAVE_STRINGS_H.c.obj
+FAILED: CMakeFiles/cmTC_ad47f.dir/HAVE_STRINGS_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_ad47f.dir\HAVE_STRINGS_H.c.obj /FdCMakeFiles\cmTC_ad47f.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_STRINGS_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_STRINGS_H.c(2): fatal error C1083: 无法打开包括文件: “strings.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <strings.h>
+
+
+int main(void){return 0;}
+
+Determining if files stropts.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_8ec6a && [1/2] Building C object CMakeFiles\cmTC_8ec6a.dir\HAVE_STROPTS_H.c.obj
+FAILED: CMakeFiles/cmTC_8ec6a.dir/HAVE_STROPTS_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_8ec6a.dir\HAVE_STROPTS_H.c.obj /FdCMakeFiles\cmTC_8ec6a.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_STROPTS_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_STROPTS_H.c(2): fatal error C1083: 无法打开包括文件: “stropts.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <stropts.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/ioctl.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b7622 && [1/2] Building C object CMakeFiles\cmTC_b7622.dir\HAVE_SYS_IOCTL_H.c.obj
+FAILED: CMakeFiles/cmTC_b7622.dir/HAVE_SYS_IOCTL_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_b7622.dir\HAVE_SYS_IOCTL_H.c.obj /FdCMakeFiles\cmTC_b7622.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_IOCTL_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_IOCTL_H.c(2): fatal error C1083: 无法打开包括文件: “sys/ioctl.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <sys/ioctl.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/param.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_64cd0 && [1/2] Building C object CMakeFiles\cmTC_64cd0.dir\HAVE_SYS_PARAM_H.c.obj
+FAILED: CMakeFiles/cmTC_64cd0.dir/HAVE_SYS_PARAM_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_64cd0.dir\HAVE_SYS_PARAM_H.c.obj /FdCMakeFiles\cmTC_64cd0.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_PARAM_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_PARAM_H.c(2): fatal error C1083: 无法打开包括文件: “sys/param.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <sys/param.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/select.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_1fd14 && [1/2] Building C object CMakeFiles\cmTC_1fd14.dir\HAVE_SYS_SELECT_H.c.obj
+FAILED: CMakeFiles/cmTC_1fd14.dir/HAVE_SYS_SELECT_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_1fd14.dir\HAVE_SYS_SELECT_H.c.obj /FdCMakeFiles\cmTC_1fd14.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_SELECT_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_SELECT_H.c(2): fatal error C1083: 无法打开包括文件: “sys/select.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <sys/select.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/time.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9125e && [1/2] Building C object CMakeFiles\cmTC_9125e.dir\HAVE_SYS_TIME_H.c.obj
+FAILED: CMakeFiles/cmTC_9125e.dir/HAVE_SYS_TIME_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_9125e.dir\HAVE_SYS_TIME_H.c.obj /FdCMakeFiles\cmTC_9125e.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_TIME_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_TIME_H.c(2): fatal error C1083: 无法打开包括文件: “sys/time.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <sys/time.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/uio.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b6fa1 && [1/2] Building C object CMakeFiles\cmTC_b6fa1.dir\HAVE_SYS_UIO_H.c.obj
+FAILED: CMakeFiles/cmTC_b6fa1.dir/HAVE_SYS_UIO_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_b6fa1.dir\HAVE_SYS_UIO_H.c.obj /FdCMakeFiles\cmTC_b6fa1.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UIO_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UIO_H.c(2): fatal error C1083: 无法打开包括文件: “sys/uio.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <sys/uio.h>
+
+
+int main(void){return 0;}
+
+Determining if files dlfcn.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_6197c && [1/2] Building C object CMakeFiles\cmTC_6197c.dir\HAVE_DLFCN_H.c.obj
+FAILED: CMakeFiles/cmTC_6197c.dir/HAVE_DLFCN_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_6197c.dir\HAVE_DLFCN_H.c.obj /FdCMakeFiles\cmTC_6197c.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_DLFCN_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_DLFCN_H.c(2): fatal error C1083: 无法打开包括文件: “dlfcn.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <dlfcn.h>
+
+
+int main(void){return 0;}
+
+Determining if files unistd.h exist failed with the following output:
+Change Dir: D:/githubCode/framework/xLua/build/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_21b8c && [1/2] Building C object CMakeFiles\cmTC_21b8c.dir\HAVE_UNISTD_H.c.obj
+FAILED: CMakeFiles/cmTC_21b8c.dir/HAVE_UNISTD_H.c.obj 
+C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_21b8c.dir\HAVE_UNISTD_H.c.obj /FdCMakeFiles\cmTC_21b8c.dir\ /FS -c D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_UNISTD_H.c
+D:\githubCode\framework\xLua\build\out\build\x64-Debug\CMakeFiles\CheckIncludeFiles\HAVE_UNISTD_H.c(2): fatal error C1083: 无法打开包括文件: “unistd.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <unistd.h>
+
+
+int main(void){return 0;}
+
