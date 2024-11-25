@@ -36,6 +36,8 @@ option ( GC64 "using gc64" OFF )
 option ( LUAC_COMPATIBLE_FORMAT "compatible format" OFF )
 
 #自定义option begin
+option ( XLUA_BUILD_WITH_CARES "build with c-ares support" ON )
+option ( YASIO_USE_SHARED_PACKET "" ON)
 
 message(STATUS "WINSTORE=${WINSTORE}")
 message(STATUS "LINUX=${LINUX}")
@@ -49,6 +51,12 @@ option ( USE_PC7ZIP "using 7zip" ON )
 option ( USE_RAPIDJSON "using RapidJson" ON )
 #使用pb
 option ( USE_PROTOBUF "using pb" ON )
+
+# Disable c-ares for winstore, because c-ares not support it properly
+if(WINSTORE)
+    set (XLUA_BUILD_WITH_CARES OFF)
+endif()
+message(STATUS "XLUA_BUILD_WITH_CARES=${XLUA_BUILD_WITH_CARES}")
 
 #自定义option end
 
@@ -116,6 +124,8 @@ set (YASIO_SOURCES
 if (ANDROID)
   list(APPEND THIRDPART_LIB "log")
 endif()
+list(APPEND THIRDPART_INC yasio yasio/3rdparty yasio/3rdparty/kcp)
+list(APPEND THIRDPART_SRC ${YASIO_SOURCES})
 set_property(
     SOURCE ${YASIO_SOURCES}
     APPEND
@@ -325,6 +335,7 @@ if (USE_RAPIDJSON)
         external/lua-protobuf/pb.c
     )
 endif () 
+#自定义 cpp end
 
 set_property(
     SOURCE ${LUA_EXTENSIONS_SRC}
@@ -334,14 +345,11 @@ set_property(
 )
 set (THIRDPART_SRC ${THIRDPART_SRC} ${LUA_EXTENSIONS_SRC} )
 
-list(APPEND THIRDPART_INC yasio yasio/3rdparty yasio/3rdparty/kcp)
-list(APPEND THIRDPART_SRC ${YASIO_SOURCES})
 set ( XLUA_CORE
     i64lib.c
     xlua.c
 )
 
-#自定义 cpp end
 if (NOT USING_LUAJIT)
     list (APPEND XLUA_CORE memory_leak_checker.c)
 endif ( )
