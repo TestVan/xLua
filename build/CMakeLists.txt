@@ -126,6 +126,7 @@ if (ANDROID)
 endif()
 list(APPEND THIRDPART_INC yasio yasio/3rdparty yasio/3rdparty/kcp)
 list(APPEND THIRDPART_SRC ${YASIO_SOURCES})
+
 set_property(
     SOURCE ${YASIO_SOURCES}
     APPEND
@@ -343,7 +344,8 @@ set_property(
     PROPERTY COMPILE_DEFINITIONS
     LUA_LIB
 )
-set (THIRDPART_SRC ${THIRDPART_SRC} ${LUA_EXTENSIONS_SRC} )
+list(APPEND THIRDPART_SRC ${LUA_EXTENSIONS_SRC})
+
 
 set ( XLUA_CORE
     i64lib.c
